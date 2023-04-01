@@ -1,0 +1,1 @@
+export { getStarWarsFilms } from "./getStarWarsFilms";
