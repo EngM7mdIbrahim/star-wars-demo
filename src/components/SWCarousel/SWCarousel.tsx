@@ -19,8 +19,6 @@ export function SWCarousel() {
     <Carousel
       loop
       plugins={[autoplay.current]}
-      onMouseEnter={autoplay.current.stop}
-      onMouseLeave={autoplay.current.reset}
       classNames={{ root: classes.carousel, controls: classes.controls }}
     >
       {images.map((image) => (
