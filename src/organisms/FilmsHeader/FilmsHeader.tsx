@@ -7,10 +7,10 @@ import Link from 'next/link';
 import { useStyles } from './FilmsHeader.styles';
 import { Toolbar } from '@src/components/Toolbar/Toolbar';
 import { SWCarousel } from '@src/components/SWCarousel/SWCarousel';
+import getBackgroundColorRGB from 'utils/getBackgroundColorRGB';
 export function FilmsHeader() {
   const { classes, theme } = useStyles();
-  const backgroundColor =
-    theme.colorScheme === 'dark' ? 'rgba(0, 0, 0, 1)' : 'rgba(255, 255, 255, 1)';
+  const backgroundColor = getBackgroundColorRGB(theme.colorScheme);
   return (
     <div className={classes.container}>
       <SWCarousel />
@@ -22,7 +22,7 @@ export function FilmsHeader() {
         <Toolbar />
         <div className={classes.welcomeTextContainer}>
           <Text className={classes.welcomeText}>WELCOME TO </Text>
-          <Image height={300} fit='contain' src={`/images/star-${theme.colorScheme}.png`}/>
+          <Image height={250} fit="contain" src={`/images/star-${theme.colorScheme}.png`} />
         </div>
       </Overlay>
     </div>

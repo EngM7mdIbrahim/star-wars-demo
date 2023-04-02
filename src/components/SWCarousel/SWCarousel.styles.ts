@@ -6,7 +6,6 @@ export const useStyles =  createStyles((theme) => ({
     position: 'absolute',
     right: 0,
     left: 0,
-    border: 'solid 2px black'
   },
   controls: {
     display: 'none',

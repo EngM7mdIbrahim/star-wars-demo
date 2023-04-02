@@ -4,6 +4,7 @@ import {
 
 export const useStyles = createStyles((theme) => ({
   page: {
+    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'start',
@@ -13,5 +14,6 @@ export const useStyles = createStyles((theme) => ({
     minWidth: '98vw',
     margin: 'auto',
     minHeight: '98vh',
+    overflowX: 'hidden'
   }
 }));

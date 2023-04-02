@@ -5,6 +5,7 @@ import { FilmData } from 'types/Films';
 import getFileName from 'utils/getFileName';
 import { useStyles } from './FilmsCards.styles';
 import Link from 'next/link';
+import getFilmID from 'utils/getIDFromURL';
 export function FilmCards({ films }: { films: FilmData[] }) {
   const { classes, theme } = useStyles();
   return (
@@ -12,7 +13,7 @@ export function FilmCards({ films }: { films: FilmData[] }) {
       {films?.map((film) => {
         return (
           <Grid.Col key={film.title} md={4}>
-            <Link href={`/film/${film.episode_id}`}>
+            <Link href={`/film/${getFilmID(film.url)}`}>
               <a className={classes.a}>
               <FilmCard
                 image={`/images/films/${getFileName(film.title)}.jpg`}
