@@ -5,7 +5,7 @@ import { Image } from '@mantine/core';
 import { useRef } from 'react';
 
 export function SWCarousel() {
-  const { classes, theme } = useStyles();
+  const { classes } = useStyles();
   const autoplay = useRef(Autoplay({ delay: 7000 }));
   const images = [
     '/images/films/a_new_hope.jpg',
@@ -18,6 +18,7 @@ export function SWCarousel() {
   return (
     <Carousel
       loop
+      //@ts-ignore
       plugins={[autoplay.current]}
       classNames={{ root: classes.carousel, controls: classes.controls }}
     >

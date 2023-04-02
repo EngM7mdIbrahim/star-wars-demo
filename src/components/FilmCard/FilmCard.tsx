@@ -33,7 +33,7 @@ export function FilmCard({ image, title, description, country, badges }: BadgeCa
       </Card.Section>
 
       <Card.Section className={classes.section}>
-        <Text mt="md" className={classes.label} c="dimmed">
+        <Text mt="md" className={classes.label}>
           Perfect for you, if you enjoy
         </Text>
         <Group spacing={7} mt={5}>
