@@ -5,7 +5,8 @@ export const useStyles = createStyles((theme) => ({
   container: {
     width: '80%',
     alignSelf: 'center',
-    marginTop: '100px',
+    display: 'flex',
+    alignItems: 'center',
     [theme.fn.smallerThan('sm')]: {
       width: '100%',
       marginTop: '0px',

@@ -1,17 +1,18 @@
+import { transform } from '@babel/core';
 import { createStyles } from '@mantine/core';
 export const useStyles = createStyles((theme) => ({
   card: {
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
     maxHeight: '500px',
-    minWidth: '400px',
     transition: 'all 200ms ease',
     [theme.fn.smallerThan('sm')]: {
       minWidth: '90%',
     },
     ':hover': {
       cursor: 'pointer',
-      boxShadow: '2px 2px 10px black'
+      boxShadow: '2px 2px 10px black',
+      transform: 'scale(1.05)'
     }
   },
   section: {

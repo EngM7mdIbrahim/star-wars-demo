@@ -9,7 +9,7 @@ import getFilmID from 'utils/getIDFromURL';
 export function FilmCards({ films }: { films: FilmData[] }) {
   const { classes, theme } = useStyles();
   return (
-    <Grid className={classes.container}>
+    <Grid gutter={'lg'} className={classes.container}>
       {films?.map((film) => {
         return (
           <Grid.Col key={film.title} md={4}>

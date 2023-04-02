@@ -22,7 +22,7 @@ export const useStyles = createStyles((theme) => ({
       display: 'none',
     },
   },
-  filmSubDetailsContainer: {
+  shipSubDetailsContainer: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -32,12 +32,6 @@ export const useStyles = createStyles((theme) => ({
     fontWeight: 1000,
     [theme.fn.smallerThan('sm')]: {
       fontSize: '28pt',
-    },
-  },
-  descText: {
-    fontSize: theme.fontSizes.xl,
-    [theme.fn.smallerThan('sm')]: {
-      fontSize: theme.fontSizes.lg,
     },
   },
   detailsText: {
@@ -55,5 +49,37 @@ export const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan('sm')]: {
       fontSize: '28pt',
     },
+  },
+  specsContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    alignItems: 'stretch',
+    gap: '10px',
+    alignSelf: 'stretch',
+  },
+  singleSpecContainer: {
+    display: 'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+
+  },
+  specLabelText: {
+    fontSize: theme.fontSizes.lg,
+    fontWeight: 700,
+    textAlign: 'left',
+    textTransform: 'capitalize',
+    [theme.fn.smallerThan('sm')]: {
+      fontSize: theme.fontSizes.md,
+    },
+    flex: 1
+  },
+  specText: {
+    fontSize: theme.fontSizes.md,
+    textAlign: 'left',
+    [theme.fn.smallerThan('sm')]: {
+      fontSize: theme.fontSizes.md,
+    },
+    flex: 1
   }
 }));

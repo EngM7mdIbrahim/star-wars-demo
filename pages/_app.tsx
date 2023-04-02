@@ -39,7 +39,8 @@ export default function App(props: AppProps<DehydartedPageProps> & { colorScheme
                 globalStyles: (theme) => ({
                   body: {
                     backgroundColor: theme.colorScheme === 'dark' ? theme.black : theme.white,
-                  }
+                    
+                  },
                 }),
               }}
               withGlobalStyles
